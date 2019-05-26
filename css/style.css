@@ -20,6 +20,9 @@
 .bg-d8d5cf {
   background-color: #d8d5cf;
 }
+.c-6d6e70 {
+  color: #6d6e70;
+}
 .c-5f5f5f {
   color: #5f5f5f;
 }
@@ -406,7 +409,9 @@ nav li:hover a {
   border-bottom: 1px solid #bba86b;
 }
 
-.ul-menu-mobile li.active a, .ul-menu-mobile li:active a, .ul-menu-mobile li:hover a {
+.ul-menu-mobile li.active a,
+.ul-menu-mobile li:active a,
+.ul-menu-mobile li:hover a {
   background-color: #bba86b;
 }
 .ul-menu-mobile li a.li-dropdown.collapsed {
@@ -419,17 +424,17 @@ nav li:hover a {
   background-repeat: no-repeat;
   background-position: 90% center;
 }
-.sub-lv-2{
-    list-style: none;
+.sub-lv-2 {
+  list-style: none;
 }
-.sub-lv-2 li a{
-    background-color: #ffffff!important;
-    color: #272727;
-    border-bottom: 0;
-    font-size: 1.45em;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 1.5rem;
+.sub-lv-2 li a {
+  background-color: #ffffff !important;
+  color: #272727;
+  border-bottom: 0;
+  font-size: 1.45em;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 1.5rem;
 }
 .list-dropdown {
   position: absolute;
@@ -442,6 +447,7 @@ nav li:hover a {
 .have-dropdown:hover .list-dropdown {
   display: block;
   opacity: 1;
+  z-index: 500;
 }
 .custom-div-dropdown {
   padding: 1.2rem 5rem;
@@ -483,7 +489,20 @@ nav li:hover a {
   background-color: #bba86b;
   transition: width 300ms ease-out;
 }
-
+.hover-line::after {
+  content: "";
+  width: 0%;
+  top: 90%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  height: 2px;
+  background-color: #bba86b;
+  transition: width 300ms ease-out;
+}
+.hover-line:hover::after {
+  width: 100%;
+}
 .ul-dropdown li.li-dropdown:hover {
   border-bottom: 0 !important;
 }
@@ -495,16 +514,164 @@ nav li:hover a {
   margin-left: 1%;
   margin-right: 1%;
 }
-#product-collapse, #brand-collapse {
+#product-collapse,
+#brand-collapse {
   background-color: #ffffff;
   padding-left: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.title-list-collapse{
-    font-size: 1.45em;
-    color: #bba86b;
-    margin-bottom: 0;
+.title-list-collapse {
+  font-size: 1.45em;
+  color: #bba86b;
+  margin-bottom: 0;
+}
+.modal-content-jewelmalls {
+  border: 1px solid #272727 !important;
+  border-radius: 0.45rem !important;
+}
+.img-logo-modal {
+  width: 100%;
+  max-width: 230px;
+  margin-bottom: 1rem;
+}
+.icon-close-modal {
+  position: absolute;
+  right: 0;
+  top: -5px;
+  width: 40px;
+  border: none;
+  outline: none;
+}
+.icon-close-modal img {
+  width: 100%;
+}
+.p-text-login-modal {
+  font-size: 1.8em;
+  margin-bottom: 3rem;
+}
+.md-form.for-modal {
+  margin-bottom: 2.5rem;
+}
+.md-form.for-modal label {
+  color: #6d6e70;
+}
+.md-form.for-modal input {
+  border-bottom: 1px solid #6d6e70;
+}
+.md-form.for-modal label {
+  -webkit-transform: translateY(-25px) scale(1);
+  -ms-transform: translateY(-25px) scale(1);
+  transform: translateY(-25px) scale(1);
+  font-size: 1.5em;
+}
+.md-form.for-modal input:focus:not([readonly]) {
+  -webkit-box-shadow: 0 1px 0 0 #bba86b;
+  box-shadow: 0 1px 0 0 #bba86b;
+  border-bottom: 1px solid #bba86b;
+}
+.md-form.for-modal input:focus:not([readonly]) + label {
+  color: #bba86b;
+}
+.p-text-forgot {
+  font-size: 1.5em;
+  color: #6d6e70;
+}
+/*Button*/
+.btn-login-modal {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  outline: none;
+  border: none;
+  background-color: #bba86b;
+  color: #ffffff;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+.btn {
+  text-transform: none;
+}
+.btn-login-modal:hover {
+  color: #6d6e70;
+}
+.btn-forgot-pass {
+  background-color: #bba86b;
+  color: #ffffff;
+  font-size: 1.5em;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+}
+.btn-jew-black {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  background-color: #272727;
+  font-size: 1.5em;
+  color: #ffffff;
+  border-radius: 0.2rem;
+}
+.btn-jew-black:hover {
+  color: #a7a7a7;
+}
+.btn-jew-outline-black {
+  background-color: transparent;
+  border: 1px solid #272727;
+  color: #bba86b;
+  font-size: 1.5em;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-radius: 0.2rem;
+}
+.btn-jew-outline-black:hover {
+  color: #bba86b;
+}
+.btn-social {
+  font-size: 1.2em !important;
+  text-transform: none;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.icon-social-btn {
+  width: 30px;
+}
+.input-jew {
+  width: 100%;
+  border: 1px solid #272727;
+  color: #bba86b;
+  font-size: 1.5em;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 0.15rem;
+  outline: none;
+}
+.footer-jew {
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  background-color: #272727;
+}
+.title-footer {
+  color: #bba86b;
+  font-size: 1.35em;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #bba86b;
+}
+.ul-footer {
+  margin-top: 1.5rem;
+  list-style: none;
+  color: #ffffff;
+}
+.ul-footer li {
+  margin-bottom: 0.5rem;
+}
+.ul-footer li a span {
+  color: #ffffff;
+  font-size: 1.2em;
 }
 @media (max-width: 699px) {
   header {
@@ -545,10 +712,15 @@ nav li:hover a {
     left: 0.5rem !important;
     top: 25% !important;
   }
+  .icon-close-modal {
+    right: 10px;
+    top: 0;
+  }
+  .p-text-login-modal {
+    margin-bottom: 1rem;
+  }
 }
 @media (min-width: 700px) {
-  header {
-  }
   nav li {
     margin-left: 20px;
     margin-right: 20px;
@@ -569,6 +741,8 @@ nav li:hover a {
     transition: margin-left 400ms ease-out;
   }
   body.open-menu {
+    position: fixed;
+    width: 100%;
     margin-left: 345px;
   }
   #navmain {
@@ -627,10 +801,19 @@ nav li:hover a {
     background-color: #272727;
     overflow-x: hidden;
     overflow-y: auto;
+    z-index: 500;
     transition: width 400ms ease-out;
   }
   .menu-mobile.open-menu-left {
     width: 100% !important;
+  }
+  .for-break-border {
+    border-bottom: 1px solid #272727;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  main {
+    padding-top: 50px;
   }
 }
 @media (min-width: 900px) {
@@ -655,6 +838,9 @@ nav li:hover a {
   }
   .menu-mobile {
     display: none;
+  }
+  .for-break-border {
+    border-right: 1px solid #272727;
   }
 }
 @media (min-width: 1000px) {
