@@ -17,6 +17,12 @@
   font-family: "DBHelvethaicaMonXReg", Helvetica, Aria, sans-serif;
   color: #272727;
 }
+.bg-d8d5cf {
+  background-color: #d8d5cf;
+}
+.c-5f5f5f {
+  color: #5f5f5f;
+}
 /*Icon Hamberger*/
 .animated-icon1 {
   width: 30px;
@@ -359,19 +365,19 @@ nav li:hover a {
 .icon-nav-profile {
   width: 38px;
 }
-.div-menu-search{
-    padding: 2rem;    
-    width: 100%;
+.div-menu-search {
+  padding: 2rem;
+  width: 100%;
 }
-.div-menu-search .icon-input-search-mobile{
-    width: 25px;
-    margin-right: 10px;
+.div-menu-search .icon-input-search-mobile {
+  width: 25px;
+  margin-right: 10px;
 }
-.div-menu-search .input-search-mobile{
-    width: 100%;
-    font-size: 1.3em;
-    padding-left: 1rem;
-    padding-right: 1rem;
+.div-menu-search .input-search-mobile {
+  width: 100%;
+  font-size: 1.3em;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 #nav-logo {
   position: fixed;
@@ -383,6 +389,122 @@ nav li:hover a {
   top: -40px;
   z-index: 200;
   opacity: 0;
+}
+.ul-menu-mobile {
+  list-style: none;
+}
+.ul-menu-mobile li a {
+  padding: 0.8rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: 500;
+  width: 100%;
+  display: block;
+  transition: all 200ms ease-out;
+  border-bottom: 1px solid #bba86b;
+}
+
+.ul-menu-mobile li.active a, .ul-menu-mobile li:active a, .ul-menu-mobile li:hover a {
+  background-color: #bba86b;
+}
+.ul-menu-mobile li a.li-dropdown.collapsed {
+  background-image: url("../img/arrow-dropdown.png");
+  background-repeat: no-repeat;
+  background-position: 90% center;
+}
+.ul-menu-mobile li a.li-dropdown {
+  background-image: url("../img/arrow-dropdown-up.png");
+  background-repeat: no-repeat;
+  background-position: 90% center;
+}
+.sub-lv-2{
+    list-style: none;
+}
+.sub-lv-2 li a{
+    background-color: #ffffff!important;
+    color: #272727;
+    border-bottom: 0;
+    font-size: 1.45em;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 1.5rem;
+}
+.list-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  opacity: 0;
+}
+.have-dropdown:hover .list-dropdown {
+  display: block;
+  opacity: 1;
+}
+.custom-div-dropdown {
+  padding: 1.2rem 5rem;
+}
+.head-dropdown-text {
+  font-size: 1.4em;
+}
+.ul-dropdown {
+  padding: 0;
+  background-color: transparent;
+}
+.ul-dropdown li.li-dropdown {
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 0 !important;
+  display: block;
+}
+.ul-dropdown li.li-dropdown a {
+  display: block;
+  padding-left: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  font-size: 1.4em;
+  font-weight: 400;
+}
+.ul-dropdown li.li-dropdown a span {
+  position: relative;
+  transition: border-bottom 400ms ease-in;
+}
+.ul-dropdown li.li-dropdown a span::after {
+  content: "";
+  width: 0%;
+  top: 90%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  height: 2px;
+  background-color: #bba86b;
+  transition: width 300ms ease-out;
+}
+
+.ul-dropdown li.li-dropdown:hover {
+  border-bottom: 0 !important;
+}
+.ul-dropdown li.li-dropdown:hover a span::after {
+  width: 100%;
+}
+.box-brand {
+  width: 29.33%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+#product-collapse, #brand-collapse {
+  background-color: #ffffff;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.title-list-collapse{
+    font-size: 1.45em;
+    color: #bba86b;
+    margin-bottom: 0;
 }
 @media (max-width: 699px) {
   header {
@@ -444,6 +566,7 @@ nav li:hover a {
 @media (max-width: 899px) {
   body {
     position: relative;
+    transition: margin-left 400ms ease-out;
   }
   body.open-menu {
     margin-left: 345px;
@@ -497,10 +620,17 @@ nav li:hover a {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 0%;
     max-width: 345px;
     height: 100vh;
+    padding-bottom: 5vh;
     background-color: #272727;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: width 400ms ease-out;
+  }
+  .menu-mobile.open-menu-left {
+    width: 100% !important;
   }
 }
 @media (min-width: 900px) {
@@ -522,6 +652,9 @@ nav li:hover a {
   .img-logo-for-scroll {
     display: block;
     height: 2em;
+  }
+  .menu-mobile {
+    display: none;
   }
 }
 @media (min-width: 1000px) {

@@ -49,4 +49,6 @@ function dropMenu() {
 
 $(".nav-menu-mobile").on("click", function() {
   $(".animated-icon1").toggleClass("open");
+  $("body").toggleClass("open-menu");
+  $(".menu-mobile").toggleClass("open-menu-left");
 });
