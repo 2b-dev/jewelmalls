@@ -673,6 +673,17 @@ nav li:hover a {
   color: #ffffff;
   font-size: 1.2em;
 }
+.section-live{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.box-video {
+  padding: 10px;
+  background-color: #272727;
+}
+.video {
+  width: 100%;
+}
 @media (max-width: 699px) {
   header {
     padding-top: 0.5rem;

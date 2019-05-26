@@ -52,3 +52,37 @@ $(".nav-menu-mobile").on("click", function() {
   $("body").toggleClass("open-menu");
   $(".menu-mobile").toggleClass("open-menu-left");
 });
+function openFullscreen(video_selected) {
+  
+  var elem = video_selected;  
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) {
+    /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) {
+    /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+$(".btn-sound").on("click", function() {
+  var video_selected = $(this)
+    .parent()
+    .parent()
+    .find("video");
+  if (video_selected.prop("muted") == false) {
+    video_selected.prop("muted", true);
+  } else {
+    video_selected.prop("muted", false);
+  }
+});
+$(".btn-screen").on("click", function() {
+  var video_selected = $(this)
+    .parent()
+    .parent()
+    .find("video");
+    openFullscreen(video_selected);
+});
