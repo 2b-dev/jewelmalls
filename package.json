@@ -1,0 +1,24 @@
+{
+  "name": "jewelmalls",
+  "version": "1.0.0",
+  "description": "HTML template for Knacx Corp",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2b-dev/jewelmalls.git"
+  },
+  "keywords": [
+    "'HTML'",
+    "'Bootstrap'",
+    "'Template'"
+  ],
+  "author": "Nu Chaimongkon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/2b-dev/jewelmalls/issues"
+  },
+  "homepage": "https://github.com/2b-dev/jewelmalls#readme"
+}
