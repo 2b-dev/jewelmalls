@@ -68,21 +68,4 @@ function openFullscreen(video_selected) {
     elem.msRequestFullscreen();
   }
 }
-$(".btn-sound").on("click", function() {
-  var video_selected = $(this)
-    .parent()
-    .parent()
-    .find("video");
-  if (video_selected.prop("muted") == false) {
-    video_selected.prop("muted", true);
-  } else {
-    video_selected.prop("muted", false);
-  }
-});
-$(".btn-screen").on("click", function() {
-  var video_selected = $(this)
-    .parent()
-    .parent()
-    .find("video");
-    openFullscreen(video_selected);
-});
+

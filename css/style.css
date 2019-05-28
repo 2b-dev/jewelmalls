@@ -673,9 +673,9 @@ nav li:hover a {
   color: #ffffff;
   font-size: 1.2em;
 }
-.section-live{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+.section-live {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .box-video {
   padding: 10px;
@@ -683,6 +683,69 @@ nav li:hover a {
 }
 .video {
   width: 100%;
+}
+.bag-side {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 90%;
+  max-width: 345px;
+  height: 100vh;
+  z-index: 50;
+  background-color: #ffffff;
+  border-left: 1px solid #d9d9d9;
+}
+.box-bag-header {
+  background-color: #272727;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+  position: relative;
+}
+.text-bag {
+  color: #c2af6f;
+  font-size: 1.7em;
+  line-height: 1em;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+.text-sum-money-bag {
+  font-size: 2.3em;
+  line-height: 1em;
+  font-weight: 500;
+  color: #6d6e70;
+}
+.btn-close-bag {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 20px;
+  height: 20px;
+}
+.btn-close-bag img {
+  width: 100%;
+  max-width: 100%;
+}
+.btn-close-bag:hover,
+.btn-close-bag:active {
+  outline: none;
+  width: 22px;
+  height: 22px;
+}
+.box-bag-item {
+  min-height: 1px;
+  max-height: 50vh;
+}
+.box-bag-sum-price {
+  padding-top: 2rem;
+  height: 30vh;
+  text-align: center;
 }
 @media (max-width: 699px) {
   header {
@@ -769,6 +832,7 @@ nav li:hover a {
     -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.46);
     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.46);
   }
+
   .block-user-ipad {
     display: flex;
     position: absolute;
@@ -824,7 +888,7 @@ nav li:hover a {
     margin-bottom: 1rem;
   }
   main {
-    padding-top: 50px;
+    padding-top: 75px;
   }
 }
 @media (min-width: 900px) {
