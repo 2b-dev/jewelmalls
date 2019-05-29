@@ -52,6 +52,11 @@ $(".nav-menu-mobile").on("click", function() {
   $("body").toggleClass("open-menu");
   $(".menu-mobile").toggleClass("open-menu-left");
 });
+$(".for-bag").on("click", function() {
+  $(".bag-side").toggleClass("bag-side-open");
+  $("body").toggleClass("open-bag-side");
+});
+
 function openFullscreen(video_selected) {
   
   var elem = video_selected;  
