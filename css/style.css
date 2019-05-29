@@ -791,12 +791,32 @@ nav li:hover a {
   line-height: 1em;
   color: #ffffff;
 }
+.btn-gold-jawel:hover, .btn-gold-jawel:active{
+  color: #272727;
+}
 .btn-black-jawel {
   background-color: #272727;
   border-radius: 0.25rem;
   font-size: 1.5em;
   line-height: 1em;
   color: #ffffff;
+}
+.btn-black-jawel:hover, .btn-black-jawel:active{
+  color: #bba86f;
+}
+.btn-text-live{
+  font-size: 1.8em;
+  padding: 0;
+  box-shadow: none;
+  display: flex;
+  color: #6D6E70;
+  font-weight: 500;
+}
+.btn-text-live img {
+  margin-right: 10px;
+}
+.btn-text-live:hover, .btn-text-live.active{
+  box-shadow: none;
 }
 .bag-item {
   padding: 1rem;
@@ -805,6 +825,26 @@ nav li:hover a {
   position: relative;
   color: #272727;
   border-bottom: 1px solid #d9d9d9;
+}
+.control-video{
+  text-align: right;
+}
+.btn-sound, .btn-screen{
+  background-color: transparent;
+  outline: none;
+  width: 30px;
+  height: 30px;
+  border: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.btn-sound img, .btn-screen img{
+  width: 100%;
+  max-width: 100%;
+}
+.icon-next-video{
+  width: 15px;
+  margin-left: 10px;
 }
 @media (max-width: 699px) {
   header {

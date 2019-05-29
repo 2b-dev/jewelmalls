@@ -56,10 +56,39 @@ $(".for-bag").on("click", function() {
   $(".bag-side").toggleClass("bag-side-open");
   $("body").toggleClass("open-bag-side");
 });
+$(".btn-sound").on("click", function() {
+  var video_selected = $(this)
+    .parent()
+    .parent()
+    .find("video");
+  if (video_selected.prop("muted") == false) {
+    video_selected.prop("muted", true);
+  } else {
+    video_selected.prop("muted", false);
+  }
+});
+/*$(".btn-screen").on("click", function() {
+  var elem = $(this)
+    .parent()
+    .parent()
+    .find("video");
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) {
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) {
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    elem.msRequestFullscreen();
+  }
+});*/
 
-function openFullscreen(video_selected) {
-  
-  var elem = video_selected;  
+function openFullscreen(el) {
+  /*var elem = $(el)
+    .parent()
+    .parent()
+    .find("video");*/
+  var elem = document.getElementById("index-video");
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
   } else if (elem.mozRequestFullScreen) {
@@ -73,4 +102,3 @@ function openFullscreen(video_selected) {
     elem.msRequestFullscreen();
   }
 }
-

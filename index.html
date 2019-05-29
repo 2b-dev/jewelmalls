@@ -595,16 +595,28 @@
         <div class="row justify-content-center">
           <div class="col-12 col-md-10 col-lg-9">
             <div class="box-video">
-              <video class="video" autoplay muted>
+              <video id="index-video" class="video" autoplay muted>
                 <source src="./img/mov_bbb.mp4" type="video/mp4">
               </video>
               <div class="control-video">
                 <button class="btn-sound">
-                  Sound
+                  <img src="./img/icon-sound.png">
                 </button>
-                <button class="btn-screen">
-                  Screen
+                <button class="btn-screen" onclick="openFullscreen(this);">
+                  <img src="./img/icon-fullscreen.png">
                 </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-10 col-lg-9 mt-2">
+            <div class="row">
+              <div class="col-12 col-lg-5 d-flex align-items-center ">
+                <button class="btn btn-text-live"><img src="./img/icon-video-live.png" class="icon-video-live">สินค้าที่กำลังถ่ายทอดสด</button>
+              </div>
+              <div class="col-12 col-lg-7  text-right">
+                <button class="btn btn-black-jawel px-3 py-2">ดูรายการทีวีย้อนหลัง</button>
+                <button class="btn btn-gold-jawel px-3 py-2">ดูรายการทีวีถัดไป <img src="./img/icon-next-video.png"
+                    class="icon-next-video"></button>
               </div>
             </div>
           </div>
