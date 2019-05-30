@@ -17,6 +17,9 @@
   font-family: "DBHelvethaicaMonXReg", Helvetica, Aria, sans-serif;
   color: #272727;
 }
+#main-head{
+  z-index: 50;
+}
 .bg-d8d5cf {
   background-color: #d8d5cf;
 }
@@ -967,7 +970,7 @@ nav li:hover a {
   background-color: transparent;
   background-image: url("../img/under-line-flower.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: auto;
 }
 .card-product-index {
   position: relative;
