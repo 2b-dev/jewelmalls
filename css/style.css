@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: "DBHelvethaicaMonXReg";
   src: url("../font/DBHelvethaicaMonX/DBHelvethaicaMonXReg.eot?#iefix")
       format("embedded-opentype"),
@@ -9,12 +9,12 @@
   font-weight: normal;
   font-style: normal;
 }
-
+*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "DBHelvethaicaMonXReg", Helvetica, Aria, sans-serif;
+  font-family: "DB HelvethaicaMon X", Helvetica, Aria, sans-serif;
   color: #272727;
 }
 #main-head{
@@ -1006,6 +1006,8 @@ nav li:hover a {
   margin-bottom: 1.8rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  height: 2em;
+  overflow: hidden;
 }
 .card-product-body-detail {
   display: none;
