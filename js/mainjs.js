@@ -128,3 +128,10 @@ $(".owl-new-product").owlCarousel({
 $('.icon-fav-card-product').on("click", function(){
   $(this).toggleClass("get_fav");
 })
+$(document).mouseup(function (e) {
+  if (!$('.bag-side').is(e.target) // if the target of the click isn't the container...
+  && $('.bag-side').has(e.target).length === 0) // ... nor a descendant of the container
+  {
+    $('.bag-side').removeClass('bag-side-open');
+ }
+});
