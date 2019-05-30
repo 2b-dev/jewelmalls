@@ -874,6 +874,30 @@ nav li:hover a {
   width: 15px;
   margin-left: 10px;
 }
+.box-product-intro {
+  width: 100%;
+  position: relative;
+}
+.box-product-intro.left {
+  padding-left: 20%;
+}
+.box-product-intro.right {
+  padding-right: 20%;
+}
+.product-intro-item {
+  position: absolute;
+  background-color: #d8d5cf;
+  padding: 2rem;
+  width: 40%;
+}
+.box-product-intro.left .product-intro-item {
+  bottom: 0;
+  left: 0;
+}
+.box-product-intro.right .product-intro-item {
+  top: 0;
+  right: 0;
+}
 @media (max-width: 699px) {
   header {
     padding-top: 0.5rem;
