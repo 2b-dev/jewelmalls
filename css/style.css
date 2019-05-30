@@ -740,15 +740,19 @@ nav li:hover a {
   z-index: 50;
   background-color: #ffffff;
   border-left: 1px solid #d9d9d9;
-  display: none;
-  opacity: 0;
-  transition: width 800ms ease-out;
+  display: block;
+  opacity: 1;
+  overflow: hidden;
+  /*transition: width 400ms ease-in-out;*/
+  -moz-transition: width .4s ease-in-out;
+  -webkit-transition: width .4s ease-in-out;
+  -ms-transition: width .4s ease-in-out;
+  -o-transition: width .4s ease-in-out;
+  transition: width .4s ease-in-out;
 }
 .bag-side-open {
   width: 90%;
-  max-width: 345px;
-  display: block;
-  opacity: 1;
+  max-width: 345px;  
 }
 .box-bag-header {
   background-color: #272727;
@@ -1133,7 +1137,6 @@ nav li:hover a {
   }
   .bag-side-open {
     width: 90%;
-    display: block;
     opacity: 1;
   }
   body.open-bag-side {
@@ -1246,7 +1249,6 @@ nav li:hover a {
   }
   .bag-side-open {
     width: 90%;
-    display: block;
     opacity: 1;
   }
   body.open-bag-side {
@@ -1295,8 +1297,6 @@ nav li:hover a {
   .bag-side-open {
     width: 90%;
     max-width: 300px;
-    display: block;
-    opacity: 1;
   }
 }
 @media (min-width: 1000px) {
