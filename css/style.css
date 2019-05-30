@@ -209,7 +209,7 @@ nav li {
   /*transition: box-shadow: 400ms ease-in;*/
 }
 nav li a {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.45em;
   color: #272727;
   list-style: none;
@@ -218,7 +218,7 @@ nav li a {
 }
 nav li.active,
 nav li:hover {
-  border-bottom: 3px solid #272727;
+  border-bottom: 2px solid #272727;
 }
 nav li:hover a {
   color: #272727;
@@ -230,6 +230,8 @@ nav li:hover a {
   z-index: 100;
   width: 100%;
   position: fixed;
+  max-width: 1140px;
+  margin: 0 auto;
 }
 .nav-abs .div-search {
   position: absolute;
@@ -422,8 +424,13 @@ nav li:hover a {
   color: whitesmoke;
   text-shadow: 0px 0px 6px black;
   top: -40px;
+  left: 0;
+  right: 0;
   z-index: 200;
   opacity: 0;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
 }
 .ul-menu-mobile {
   list-style: none;
