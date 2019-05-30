@@ -102,3 +102,25 @@ function openFullscreen(el) {
     elem.msRequestFullscreen();
   }
 }
+
+$(".owl-new-product").owlCarousel({
+  loop: true,
+  margin: 15,
+  autoplay: true,
+  autoplayTimeout: 1500,
+  responsiveClass: true,
+  responsive: {
+    0: {
+      items: 2,
+      nav: false
+    },
+    600: {
+      items: 3,
+      nav: true
+    },
+    1000: {
+      items: 4,
+      nav: true
+    }
+  }
+});
