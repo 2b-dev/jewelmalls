@@ -1,4 +1,4 @@
-/*@font-face {
+@font-face {
   font-family: "DBHelvethaicaMonXReg";
   src: url("../font/DBHelvethaicaMonX/DBHelvethaicaMonXReg.eot?#iefix")
       format("embedded-opentype"),
@@ -9,12 +9,12 @@
   font-weight: normal;
   font-style: normal;
 }
-*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "DB HelvethaicaMon X", Helvetica, Aria, sans-serif;
+  font-family: "DBHelvethaicaMonXReg", Helvetica, Aria, sans-serif;
   color: #272727;
 }
 #main-head{
@@ -1036,13 +1036,17 @@ nav li:hover a {
   left: 10px;
   width: 25px;
   height: 25px;
+  background-image: url('../img/icon-fav-card-product.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
 }
-.icon-fav-card-product img {
-  width: 100%;
-  max-width: 100%;
+.icon-fav-card-product.get_fav{
+  background-image: url('../img/icon-fav-card-product_active.png');
 }
 .icon-fav-card-product:hover,
-.icon-fav-card-product.active {
+.icon-fav-card-product:active,
+.icon-fav-card-product:focus {
   outline: none;
   width: 27px;
   height: 27px;

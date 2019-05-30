@@ -124,3 +124,7 @@ $(".owl-new-product").owlCarousel({
     }
   }
 });
+
+$('.icon-fav-card-product').on("click", function(){
+  $(this).toggleClass("get_fav");
+})

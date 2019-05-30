@@ -1,0 +1,5 @@
+Header set Access-Control-Allow-Origin "*"
+
+<FilesMatch "\.(่js|css|scss|eot|ttf|otf|woff|jpg|png)$">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
