@@ -130,10 +130,129 @@ $(".icon-fav-card-product").on("click", function() {
 });
 $(document).mouseup(function(e) {
   if (
-    !$(".bag-side").is(e.target) && 
+    !$(".bag-side").is(e.target) &&
     $(".bag-side").has(e.target).length === 0
-  ) {    
+  ) {
     $(".bag-side").removeClass("bag-side-open");
     $("body").removeClass("open-bag-side");
   }
 });
+
+/*function pricerange() {
+  var pricemin = parseInt($(".valrange1").val());
+  var pricemax = parseInt($(".valrange2").val());
+  var tmp;
+  if (pricemin > pricemax) {
+    tmp = pricemax;
+    pricemax = pricemin;
+    pricemin = tmp;
+  }
+  $(".minprice").text(pricemin + " ฿");
+  $(".maxprice").text(pricemax + " ฿");
+}*/
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector(".input-range-container");
+  const rangeLower = document.querySelector('input[name="range-lower"]');
+  const rangeUpper = document.querySelector('input[name="range-upper"]');
+  const trackerBetween = document.querySelector(".input-range-tracker-between");
+  const minValue = 0;
+  const maxValue = Number(rangeUpper.getAttribute("max"));
+
+  let containerHoverOnPercent = 0;
+
+  const updateTrackerBetween = () => {
+    const lowerValue = Number(rangeLower.value);
+    const upperValue = Number(rangeUpper.value);
+    trackerBetween.style.width = `${((upperValue - lowerValue) / maxValue) *
+      100}%`;
+    trackerBetween.style.left = `${(lowerValue / maxValue) * 100}%`;
+  };
+  updateTrackerBetween();
+
+  const moveAppropriateThumbToUpper = () => {
+    const lowerValue = Number(rangeLower.value);
+    const upperValue = Number(rangeUpper.value);
+    const closeValue = maxValue / 10;
+
+    if (upperValue - lowerValue < closeValue && upperValue > maxValue * 0.9) {
+      rangeLower.classList.add("display-upper");
+      rangeUpper.classList.remove("display-upper");
+    } else if (
+      upperValue - lowerValue < closeValue &&
+      lowerValue < maxValue * 0.1
+    ) {
+      rangeLower.classList.remove("display-upper");
+      rangeUpper.classList.add("display-upper");
+    } else {
+      const middleValue = lowerValue + (upperValue - lowerValue) / 2;
+      if (containerHoverOnPercent < middleValue / maxValue) {
+        rangeLower.classList.add("display-upper");
+        rangeUpper.classList.remove("display-upper");
+      } else {
+        rangeLower.classList.remove("display-upper");
+        rangeUpper.classList.add("display-upper");
+      }
+    }
+  };
+
+  ["mouseenter", "mousemove", "touchstart", "touchmove"].forEach(eventName => {
+    container.addEventListener(
+      eventName,
+      event => {
+        containerHoverOnPercent = event.offsetX / event.target.clientWidth;
+        moveAppropriateThumbToUpper();
+      },
+      false
+    );
+  });
+
+  rangeLower.addEventListener(
+    "input",
+    event => {
+      const lowerValue = Number(event.target.value);
+      const upperValue = Number(rangeUpper.value);
+      if (lowerValue < minValue) {
+        event.target.value = minValue;
+      } else if (lowerValue > upperValue) {
+        event.target.value = upperValue;
+      }
+
+      moveAppropriateThumbToUpper();
+      updateTrackerBetween();
+    },
+    false
+  );
+
+  rangeUpper.addEventListener(
+    "input",
+    event => {
+      const lowerValue = Number(rangeLower.value);
+      const upperValue = Number(event.target.value);
+      if (upperValue > maxValue) {
+        event.target.value = maxValue;
+      } else if (upperValue < lowerValue) {
+        event.target.value = lowerValue;
+      }
+
+      moveAppropriateThumbToUpper();
+      updateTrackerBetween();
+    },
+    false
+  );
+});
+$( "input#range-lower" ).change(function() {
+  var price_low = $("input#range-lower").val()
+  $('.set-price-lower').text(`฿ `+ price_low);
+  var pos_low = (price_low*100)/25000;
+  const lowerpos = document.querySelector(".set-price-lower");
+  lowerpos.style.left = `calc(`+(pos_low)+`% - 25px)`;
+});
+$( "input#range-upper" ).change(function() {
+  var price_low = $("input#range-upper").val()
+  $('.set-price-upper').text(`฿ `+ price_low);
+  var pos_low = (price_low*100)/25000;
+  const lowerpos = document.querySelector(".set-price-upper");
+  lowerpos.style.left = `calc(`+(pos_low)+`% - 40px)`;
+});
+
+
