@@ -1837,6 +1837,42 @@ input[name="range-upper"]::-ms-thumb {
   left: 265px;
 }
 /*End Star*/
+.table.table-bag thead tr th{
+  text-align: center;
+  font-size: 1.3em;
+  line-height: 1.1em;
+  color: #272727;
+  border-bottom: 1px solid #272727;
+}
+.table.table-bag tbody tr td{
+  font-size: 1.3em;
+  line-height: 1.1em;
+  color: #272727;
+  vertical-align: middle;
+}
+.img-table{
+  width: 80px;
+}
+.table-name-product{
+  width: 350px;
+}
+.input-number-table-product{
+  width: 80px;
+  margin: 0 auto;
+  text-align: center;
+}
+.text-price-bag{
+  font-size: 1.4em;
+  color: #6D6E70;
+  margin-bottom: 0;
+  line-height: 1.2em;
+}
+.text-sum-price-bag{
+  font-size: 1.6em;
+  color: #6D6E70;
+  margin-bottom: 0;
+  line-height: 1.2em;
+}
 @media (max-width: 699px) {
   header {
     padding-top: 0.5rem;
