@@ -128,6 +128,9 @@ $(".owl-new-product").owlCarousel({
 $(".icon-fav-card-product").on("click", function() {
   $(this).toggleClass("get_fav");
 });
+$(".btn-like-product").on("click", function() {
+  $(this).toggleClass("get_fav");
+});
 $(document).mouseup(function(e) {
   if (
     !$(".bag-side").is(e.target) &&

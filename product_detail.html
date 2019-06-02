@@ -15,6 +15,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   <link href="css/style.css" rel="stylesheet" />
 </head>
 
@@ -626,7 +627,7 @@
     </div>
   </div>
   <main id="top" class="" style="min-height: 85vh;">
-    <section class="section-filter mt-3 mt-md-5 mt-lg-3 py-lg-5">
+    <section class="section-product mt-3 mt-md-5 mt-lg-3 py-lg-5">
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-7">
@@ -699,12 +700,12 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-5">
+          <div class="col-12 col-lg-5 text-center text-lg-left">
             <p class="title-product-detail">แหวนเงินแท้ประดับเพชรสวิสใส 2 ขนาด น้ำหนักกะรัตรวม 1.07 กะรัต ชุบโรลเดียม
             </p>
             <p class="id-product-detail">RAN1001</p>
             <p class="id-product-detail">Brand: <span class="c-beab6f">Randaria</span></p>
-            <p class="price-product-detail">689 THB</p>
+            <p class="price-product-detail">689 THB <span class="label-ouf-fo-stock">สินค้าหมด</span></p>
             <p class="star-rat-product-detail">
               <i class="far fa-star"></i>
               <i class="far fa-star"></i>
@@ -712,13 +713,681 @@
               <i class="far fa-star"></i>
               <i class="far fa-star"></i>
             </p>
-            <p class="description-product-detail">
+            <p class="description-product-detail text-left">
               แหวนแต่งงานที่ให้ความรู้สึกบอบบางน่าทะนุถนอมวงนี้ขึ้นมาได้อย่างหมดจด
               เหมาะมากสำหรับสาวหวานหรือหนุ่มๆที่อยากเอาใจสาวหวานและกำลังมองหา
               ตัวแทนแห่งความรัก ก้านแหวนเรียวบางช่วยให้ทุกนิ้วที่สวมใส่ดูเรียวยาว
               และเพชรสวิสใสเม็ดยอดทรงกลมขนาดใหญ่ที่เห็นอยู่นี้ มีน้ำหนักมากถึงครึ่งกะรัต
               ทำให้แหวนทั้งวงมีน้ำหนักเพชรมากถึง 1 กะรัต ถือเป็นตัวแทนความรักได้เป็นอย่างดี
             </p>
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-4 col-lg-12 mb-3">
+                <select class="browser-default custom-select select-size">
+                  <option selected>กรุณาเลือกไซส์</option>
+                  <option value="1">20</option>
+                  <option value="2">24</option>
+                  <option value="3">28</option>
+                </select>
+              </div>
+              <div class="col-4 col-md-2 col-lg-12 mb-3">
+                <input class="form-control input-items-product" type="number" placeholder="จำนวน">
+              </div>
+              <div class="col-5 col-md-4 col-lg-5 mb-3">
+                <button class="btn btn-add-product-to-bag btn-block">เพิ่มสินค้าใส่กระเป๋า</button>
+              </div>
+              <div class="col-3 col-md-2 col-lg-2 px-lg-0 mb-3">
+                <button class="btn btn-like-product"></button>
+              </div>
+              <div class="col-12 col-lg-5 px-lg-0 mb-3 box-social" data-simplebar>
+                <button class="btn-social-product">
+                  <img src="./img/btn-facebook.png" class="img-fluid">
+                </button>
+                <button class="btn-social-product">
+                  <img src="./img/btn-twitter.png" class="img-fluid">
+                </button>
+                <button class="btn-social-product">
+                  <img src="./img/btn-gplus.png" class="img-fluid">
+                </button>
+                <button class="btn-social-product">
+                  <img src="./img/btn-pin.png" class="img-fluid">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-detail-product">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <ul class="nav nav-detail-product nav-tabs nav-justified" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab"
+                  aria-controls="description" aria-selected="true">
+                  <span class="text-nav-detail-product">รายละเอียดสินค้า</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="size-tab" data-toggle="tab" href="#size" role="tab" aria-controls="size"
+                  aria-selected="false">
+                  <span class="text-nav-detail-product">หาขนาดของสินค้า</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="comment-tab" data-toggle="tab" href="#comment" role="tab"
+                  aria-controls="comment" aria-selected="false">
+                  <span class="text-nav-detail-product">ความคิดเห็น</span>
+                </a>
+              </li>
+            </ul>
+            <div class="tab-content" id="tab-pane-detail-product">
+              <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                <div class="row">
+                  <div class="col-12 col-md-4 col-lg-6">
+                    <div class="row">
+                      <div class="col-12 col-lg-6 mb-3">
+                        <div class="box-detail">
+                          <div class="row">
+                            <div class="col-12 mb-2">
+                              <p class="t-detail-tab c-c0ad6f">ข้อมูลสินค้า</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Product Type</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">แหวน</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Product Group</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Jewelry</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Collection</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">First Love</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Total Carat Weight</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">1.07 ct.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-6 mb-3">
+                        <div class="box-detail">
+                          <div class="row">
+                            <div class="col-12 mb-2">
+                              <p class="t-detail-tab c-c0ad6f">Jewelry Attributes</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Department</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">ผู้หญิง</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Metal Type</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">เงิน</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Metal Purity</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">92.5</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Plating Color</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">โรเดียม</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Plating Purity</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">ขาว</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-8 col-lg-6">
+                    <div class="row">
+                      <div class="col-12 col-md-6 mb-3">
+                        <div class="box-detail">
+                          <div class="row">
+                            <div class="col-12 mb-2">
+                              <p class="t-detail-tab c-c0ad6f">Stone (1)</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Setting</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">ฝังเตย</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Gemstone</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">คิวบิค เซอร์โคเนีย</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Gemstone Count</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">1 pc(s).</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Carat Weight</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">0.91 ct.</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Gemstone Shape</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Round</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Primary Color</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">สีน้ำตาล</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Treatment</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">ไม่ทำทีชเม้น</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Country of Origin</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">ไม่ระบุ</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Composition</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">สังเคราะห์</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Dimension Type</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">เปรียบเทียบ</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Dimensions</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">5.00 mm.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 mb-3">
+                        <div class="box-detail">
+                          <div class="row">
+                            <div class="col-12 mb-2">
+                              <p class="t-detail-tab c-c0ad6f">Stone (2)</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Setting</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">ฝังเตย</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Gemstone</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">คิวบิค เซอร์โคเนีย</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Gemstone Count</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">1 pc(s).</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Carat Weight</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">0.91 ct.</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Gemstone Shape</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Round</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Primary Color</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">สีน้ำตาล</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Treatment</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">ไม่ทำทีชเม้น</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Country of Origin</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">ไม่ระบุ</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Composition</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">สังเคราะห์</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Dimension Type</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">เปรียบเทียบ</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Dimensions</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">5.00 mm.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 mb-3">
+                        <div class="box-detail">
+                          <div class="row">
+                            <div class="col-12 mb-2">
+                              <p class="t-detail-tab c-c0ad6f">Stone (3)</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Setting</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">ฝังเตย</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Gemstone</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">คิวบิค เซอร์โคเนีย</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Gemstone Count</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">1 pc(s).</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Carat Weight</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">0.91 ct.</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Gemstone Shape</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Round</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Primary Color</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">สีน้ำตาล</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Treatment</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">ไม่ทำทีชเม้น</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Country of Origin</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">ไม่ระบุ</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Composition</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">สังเคราะห์</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Dimension Type</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">เปรียบเทียบ</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Dimensions</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">5.00 mm.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6 mb-3">
+                        <div class="box-detail">
+                          <div class="row">
+                            <div class="col-12 mb-2">
+                              <p class="t-detail-tab c-c0ad6f">Stone (4)</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Setting</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">ฝังเตย</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Gemstone</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">คิวบิค เซอร์โคเนีย</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Gemstone Count</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">1 pc(s).</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Carat Weight</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">0.91 ct.</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Gemstone Shape</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Round</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Primary Color</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">สีน้ำตาล</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Treatment</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">ไม่ทำทีชเม้น</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Country of Origin</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">ไม่ระบุ</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Composition</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">สังเคราะห์</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Dimension Type</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">เปรียบเทียบ</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">Dimensions</p>
+                            </div>
+                            <div class="col-6 md-2">
+                              <p class="t-detail-tab c-272727">5.00 mm.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="size" role="tabpanel" aria-labelledby="size-tab">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-lg-6 text-center">
+                    <a data-fancybox="gallery" href="./img/picture_size.png">
+                      <img src="./img/picture_size.png" class="img-fluid">
+                    </a>
+                    <a data-fancybox="gallery" href="./img/picture_size.png">
+                      <p class="title-product-detail c-beab6f">คลิกที่นี้เพื่อดูภาพขนาดใหญ่</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="comment" role="tabpanel" aria-labelledby="comment-tab">
+                <!--ยังไม่ล็อคอิน-->
+                <div class="row justify-content-center">
+                  <div class="col-12 col-md-10 col-lg-8">
+                    <div class="box-alert-login">
+                      <p class="p-box-alert-login">
+                        <a data-toggle="modal" data-target="#login_modal"
+                          class="c-beab6f under-line-dot">เข้าสู่ระบบ</a>
+                        <br>
+                        ถ้าหากคุณยังไม่ได้เป็นสมาชิก?
+                        <a href="register.html" class="c-beab6f under-line-dot">สมัครสมาชิก</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!--จบ ยังไม่ล็อคอิน-->
+                <!--ล็อคอินแล้ว-->
+                <div class="row">
+                  <div class="col-12 col-md-4 fix-hight-for-comment" data-simplebar>
+                    <div class="box-comment">
+                      <p class="star-rat-product-detail mb-0">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </p>
+                      <p class="t-comment mb-0"><span class="c-beab6f">Jieranai In</span> - 2019-01-22 12:10:39</p>
+                      <p class="t-comment mb-0">- Great</p>
+                    </div>
+                    <div class="box-comment">
+                      <p class="star-rat-product-detail mb-0">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </p>
+                      <p class="t-comment mb-0"><span class="c-beab6f">Jieranai In</span> - 2019-01-22 12:10:39</p>
+                      <p class="t-comment mb-0">- Great</p>
+                    </div>
+                    <div class="box-comment">
+                      <p class="star-rat-product-detail mb-0">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </p>
+                      <p class="t-comment mb-0"><span class="c-beab6f">Jieranai In</span> - 2019-01-22 12:10:39</p>
+                      <p class="t-comment mb-0">- Great</p>
+                    </div>
+                    <div class="box-comment">
+                      <p class="star-rat-product-detail mb-0">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </p>
+                      <p class="t-comment mb-0"><span class="c-beab6f">Jieranai In</span> - 2019-01-22 12:10:39</p>
+                      <p class="t-comment mb-0">- Great</p>
+                    </div>
+                    <div class="box-comment">
+                      <p class="star-rat-product-detail mb-0">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </p>
+                      <p class="t-comment mb-0"><span class="c-beab6f">Jieranai In</span> - 2019-01-22 12:10:39</p>
+                      <p class="t-comment mb-0">- Great</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-8">
+                    <div class="row">
+                      <div class="col-12 col-lg-8 mb-3">
+                        <div class="form-group">
+                          <textarea class="form-control textarea-comment" id="textareacomment" rows="5"
+                            placeholder="ความคิดเห็นของคุณ..."></textarea>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-4 text-center text-lg-left mb-3">
+                        <div id="reviewStars-input">
+                          <input id="star-0" type="radio" name="reviewStars" />
+                          <label for="star-0"></label>
+                          <input id="star-1" type="radio" name="reviewStars" />
+                          <label for="star-1"></label>
+                          <input id="star-2" type="radio" name="reviewStars" />
+                          <label for="star-2"></label>
+                          <input id="star-3" type="radio" name="reviewStars" />
+                          <label for="star-3"></label>
+                          <input id="star-4" type="radio" name="reviewStars" />
+                          <label for="star-4"></label>
+                        </div>
+                        <button class="btn btn-add-product-to-bag px-5 py-2 my-2">SUBMIT</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="another-product mb-3">
+      <div class="container">
+        <hr class="hr-black">
+        <div class="col-12 mt-4 mb-3 text-center d-flex justify-content-center">
+          <p class="title-section under-line-flower">สินค้าที่เกี่ยวข้อง</p>
+        </div>
+      </div>
+      <div class="container py-3 py-lg-4 px-lg-4">
+        <div class="row">
+          <div class="col-6 col-lg-3 mb-3">
+            <div class="card-product-index">
+              <button class="icon-fav-card-product">
+
+              </button>
+              <div class="card-product-image">
+                <img src="./img/new-product.png" class="img-fluid">
+              </div>
+              <div class="card-product-body">
+                <p class="card-product-brand">
+                  Brand <span class="c-beab6f">jfilnt</span>
+                </p>
+                <p class="card-product-price">1,289 THB</p>
+              </div>
+              <div class="card-product-body-detail">
+                <div class="card-product-detail">
+                  <p>
+                    แหวนผู้ชายเงินแท้ประดับเพชรน้ำ 95 น้ำหนักกะรัตรวม 0.10 กะรัต ชุบทอง 14k
+                  </p>
+                </div>
+                <div class="w-100">
+                  <button class="btn btn-gold-jawel btn-block no-bd-rad m-0">ADD TO BAG</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 mb-3">
+            <div class="card-product-index">
+              <div class="card-product-image">
+                <img src="./img/new-product.png" class="img-fluid">
+              </div>
+              <div class="card-product-body">
+                <p class="card-product-brand">
+                  Brand <span class="c-beab6f">jfilnt</span>
+                </p>
+                <p class="card-product-price">1,289 THB</p>
+              </div>
+              <div class="card-product-body-detail">
+                <div class="card-product-detail">
+                  <p>
+                    แหวนผู้ชายเงินแท้ประดับเพชรน้ำ 95 น้ำหนักกะรัตรวม 0.10 กะรัต ชุบทอง 14k
+                  </p>
+                </div>
+                <div class="w-100">
+                  <button class="btn btn-gold-jawel btn-block no-bd-rad m-0">ADD TO BAG</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 mb-3">
+            <div class="card-product-index">
+              <div class="card-product-image">
+                <img src="./img/new-product.png" class="img-fluid">
+              </div>
+              <div class="card-product-body">
+                <p class="card-product-brand">
+                  Brand <span class="c-beab6f">jfilnt</span>
+                </p>
+                <p class="card-product-price">1,289 THB</p>
+              </div>
+              <div class="card-product-body-detail">
+                <div class="card-product-detail">
+                  <p>
+                    แหวนผู้ชายเงินแท้ประดับเพชรน้ำ 95 น้ำหนักกะรัตรวม 0.10 กะรัต ชุบทอง 14k
+                  </p>
+                </div>
+                <div class="w-100">
+                  <button class="btn btn-gold-jawel btn-block no-bd-rad m-0">ADD TO BAG</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 mb-3">
+            <div class="card-product-index">
+              <div class="card-product-image">
+                <img src="./img/new-product.png" class="img-fluid">
+              </div>
+              <div class="card-product-body">
+                <p class="card-product-brand">
+                  Brand <span class="c-beab6f">jfilnt</span>
+                </p>
+                <p class="card-product-price">1,289 THB</p>
+              </div>
+              <div class="card-product-body-detail">
+                <div class="card-product-detail">
+                  <p>
+                    แหวนผู้ชายเงินแท้ประดับเพชรน้ำ 95 น้ำหนักกะรัตรวม 0.10 กะรัต ชุบทอง 14k
+                  </p>
+                </div>
+                <div class="w-100">
+                  <button class="btn btn-gold-jawel btn-block no-bd-rad m-0">ADD TO BAG</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1027,6 +1696,7 @@
   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <script type="text/javascript" src="js/mainjs.js"></script>
 </body>
 <script>
