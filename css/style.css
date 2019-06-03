@@ -1763,7 +1763,24 @@ input[name="range-upper"]::-ms-thumb {
   -moz-box-shadow: 2px 2px 9px 0px rgba(192, 173, 111, 0.74);
   box-shadow: 2px 2px 9px 0px rgba(192, 173, 111, 0.74);
 }
-.hr-black{
+.textarea-pay {
+  font-size: 1.4em;
+  border: 1px solid #6d6e70;
+  max-width: 450px;
+  margin: 0 auto;
+}
+.textarea-pay:focus {
+  border: 1px solid #bba86f;
+  -webkit-box-shadow: 2px 2px 9px 0px rgba(192, 173, 111, 0.74);
+  -moz-box-shadow: 2px 2px 9px 0px rgba(192, 173, 111, 0.74);
+  box-shadow: 2px 2px 9px 0px rgba(192, 173, 111, 0.74);
+}
+.btn-pay{
+  font-size: 1.35em;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.hr-black {
   border-bottom: 1px solid #272727;
 }
 /*Star*/
@@ -1838,43 +1855,43 @@ input[name="range-upper"]::-ms-thumb {
   left: 265px;
 }
 /*End Star*/
-.table.table-bag thead tr th{
+.table.table-bag thead tr th {
   text-align: center;
   font-size: 1.3em;
   line-height: 1.1em;
   color: #272727;
   border-bottom: 1px solid #272727;
 }
-.table.table-bag tbody tr td{
+.table.table-bag tbody tr td {
   font-size: 1.3em;
   line-height: 1.1em;
   color: #272727;
   vertical-align: middle;
 }
-.img-table{
+.img-table {
   width: 80px;
 }
-.table-name-product{
+.table-name-product {
   width: 350px;
 }
-.input-number-table-product{
+.input-number-table-product {
   width: 80px;
   margin: 0 auto;
   text-align: center;
 }
-.text-price-bag{
+.text-price-bag {
   font-size: 1.4em;
-  color: #6D6E70;
+  color: #6d6e70;
   margin-bottom: 0;
   line-height: 1.2em;
 }
-.text-sum-price-bag{
+.text-sum-price-bag {
   font-size: 1.6em;
-  color: #6D6E70;
+  color: #6d6e70;
   margin-bottom: 0;
   line-height: 1.2em;
 }
-.label-address{
+.label-address {
   font-size: 1.35em;
   color: #272727;
 }
@@ -1882,18 +1899,40 @@ input[name="range-upper"]::-ms-thumb {
 .custom-control-label.label-address::before {
   top: 25%;
 }
-.bd-bottom-272727{
+.bd-bottom-272727 {
   border-bottom: 1px solid #272727;
 }
-.ip-address{
+.ip-address,
+.ip-coupon {
   font-size: 1.35em;
   color: #bba86f;
 }
-.ip-address:focus{
+.ip-coupon {
+  line-height: 0.5em;
+}
+.ip-address:focus,
+.ip-coupon:focus {
   border: 1px solid #bba86b;
-  -webkit-box-shadow: 2px 2px 9px 0px rgba(192,173,111,0.74);
--moz-box-shadow: 2px 2px 9px 0px rgba(192,173,111,0.74);
-box-shadow: 2px 2px 9px 0px rgba(192,173,111,0.74);
+  -webkit-box-shadow: 2px 2px 9px 0px rgba(192, 173, 111, 0.74);
+  -moz-box-shadow: 2px 2px 9px 0px rgba(192, 173, 111, 0.74);
+  box-shadow: 2px 2px 9px 0px rgba(192, 173, 111, 0.74);
+}
+.text-num-order {
+  font-size: 1.35em;
+}
+.table-pay.table {
+  border: 1px solid #272727;
+}
+.table-pay.table thead tr th {
+  font-size: 1.35em;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid #272727;
+  white-space: nowrap;
+}
+.table-pay.table tbody tr td,
+.table-pay.table tfoot tr td {
+  font-size: 1.35em;
 }
 @media (max-width: 699px) {
   header {
