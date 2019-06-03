@@ -654,7 +654,8 @@
                     <td class="text-center">10,389 THB</td>
                     <td class="text-center c-beab6f">#2362562</td>
                     <td class="text-center">จัดส่งแล้ว</td>
-                    <td class="text-center"><a class="c-beab6f">View</a></td>
+                    <td class="text-center"><a class="c-beab6f" data-toggle="modal" data-target="#view-pay">View</a>
+                    </td>
                     <td class="text-center">
                       <a href="#" target="_blank">
                         <img src="./img/pdf.png" class="icon-pdf">
@@ -680,7 +681,8 @@
                     <td class="text-center">10,389 THB</td>
                     <td class="text-center c-beab6f">-</td>
                     <td class="text-center c-911524">รอยืนยัน</td>
-                    <td class="text-center"><a class="c-beab6f">View</a></td>
+                    <td class="text-center"><a class="c-beab6f" data-toggle="modal" data-target="#view-pay">View</a>
+                    </td>
                     <td class="text-center">
                       <a href="#" target="_blank">
                         <img src="./img/pdf.png" class="icon-pdf">
@@ -706,7 +708,8 @@
                     <td class="text-center">10,389 THB</td>
                     <td class="text-center c-beab6f">-</td>
                     <td class="text-center">ชำระแล้ว</td>
-                    <td class="text-center"><a class="c-beab6f">View</a></td>
+                    <td class="text-center"><a class="c-beab6f" data-toggle="modal" data-target="#view-pay">View</a>
+                    </td>
                     <td class="text-center">
                       <a href="#" target="_blank">
                         <img src="./img/pdf.png" class="icon-pdf">
@@ -1026,7 +1029,87 @@
       </div>
     </div>
   </div>
-
+  <!--Modal View Pay-->
+  <div class="modal fade" id="view-pay" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p class="text-modal-pay">เลขที่สั่งซื้อ <span class="c-beab6f">#1212121212112</span></p>
+          <div class="table-responsive">
+            <table class="table table-hover table-bag">
+              <thead>
+                <tr>
+                  <th>สินค้า</th>
+                  <th></th>
+                  <th>รหัสสินค้า</th>
+                  <th class="table-name-product"></th>
+                  <th>ราคารวมทั้งหมด</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    #1
+                  </td>
+                  <td class="text-center">
+                    <img src="./img/intro_product_right.png" class="img-table">
+                  </td>
+                  <td class="text-center">1234552</td>
+                  <td class="text-left">แหวนเงินแท้ประดับเพชรสวิสใส 2 ขนาดน้ำหนักกะรัต รวม 1.07 กะรัตชุบโรเดียม</td>
+                  <td class="text-center">3,978 THB</td>
+                </tr>
+                <tr>
+                  <td>
+                    #2
+                  </td>
+                  <td class="text-center">
+                    <img src="./img/intro_product_right.png" class="img-table">
+                  </td>
+                  <td class="text-center">1234552</td>
+                  <td class="text-left">แหวนเงินแท้ประดับเพชรสวิสใส 2 ขนาดน้ำหนักกะรัต รวม 1.07 กะรัตชุบโรเดียม</td>
+                  <td class="text-center">3,978 THB</td>
+                </tr>
+                <tr>
+                  <td>
+                    #3
+                  </td>
+                  <td class="text-center">
+                    <img src="./img/intro_product_right.png" class="img-table">
+                  </td>
+                  <td class="text-center">1234552</td>
+                  <td class="text-left">แหวนเงินแท้ประดับเพชรสวิสใส 2 ขนาดน้ำหนักกะรัต รวม 1.07 กะรัตชุบโรเดียม</td>
+                  <td class="text-center">3,978 THB</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="4">
+                    <p class="mb-0">รวม</p>
+                    <p class="mb-0">VAT 7 %</p>
+                    <p class="mb-0">รวมทั้งสิ้น</p>
+                  </td>
+                  <td class="text-right c-beab6f">
+                    10,978 THB
+                    <br>
+                    725 THB
+                    <br>
+                    11,070 THB                    
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="5">
+                    ข้อมูลเพิ่มเติมเกี่ยวกับการจัดส่ง(คำสั่งซื้อ)
+                    
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
   <script type="text/javascript" src="js/popper.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>

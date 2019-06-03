@@ -1868,7 +1868,7 @@ input[name="range-upper"]::-ms-thumb {
   color: #272727;
   border-bottom: 1px solid #272727;
 }
-.table.table-bag tbody tr td {
+.table.table-bag tbody tr td , .table.table-bag tfoot tr td {
   font-size: 1.3em;
   line-height: 1.1em;
   color: #272727;
@@ -1954,6 +1954,10 @@ input[name="range-upper"]::-ms-thumb {
 .btn-table-history i {
   color: #bba86f;
   font-size: 0.8em;
+}
+.text-modal-pay{
+  font-size: 1.4em;
+  margin-bottom: 0;
 }
 @media (max-width: 699px) {
   header {
