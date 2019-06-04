@@ -1886,6 +1886,7 @@ input[name="range-upper"]::-ms-thumb {
 }
 .table-name-product {
   width: 350px;
+  min-width: 350px;
 }
 .input-number-table-product {
   width: 80px;
