@@ -2014,6 +2014,16 @@ input[name="range-upper"]::-ms-thumb {
   width: 80%;
   text-align: center;
 }
+.form-register label.col-form-label{
+  font-size: 1.4em;
+}
+.form-register label.col-form-label span{
+  color: #911524;
+}
+.form-register input.form-control{
+  font-size: 1.4em;
+  color: #bba86b;
+}
 @media (max-width: 699px) {
   header {
     padding-top: 0.5rem;
