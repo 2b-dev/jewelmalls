@@ -2016,6 +2016,7 @@ input[name="range-upper"]::-ms-thumb {
   text-align: center;
 }
 .ip-date {
+  color: #bba86b;
   background-image: url("../img/icon-date.png");
   background-repeat: no-repeat;
   background-position: 98% center;
@@ -2031,6 +2032,10 @@ input[name="range-upper"]::-ms-thumb {
   font-size: 1.4em;
   color: #bba86b;
   border: 1px solid #6d6e70;
+}
+.form-register input.form-control.disabled {
+  color: #a4a6a8;
+  background-color: #ebebeb;
 }
 .form-register input.form-control:focus {
   border: 1px solid #bba86b;
@@ -2062,7 +2067,7 @@ input[name="range-upper"]::-ms-thumb {
   top: 0.5rem;
   border-radius: 0.15rem;
 }
-.dropdown-menu.dropdown-nav .dropdown-item{
+.dropdown-menu.dropdown-nav .dropdown-item {
   font-size: 1.25em;
 }
 @media (max-width: 699px) {
