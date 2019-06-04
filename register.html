@@ -44,9 +44,22 @@
           </select>
         </div>
         <div class="div-user ">
+          <!--No Login -->
+          <!--
           <a class="btn-profile" data-toggle="modal" data-target="#login_modal">
             <img src="./img/profile-icon.png" class="icon-nav-profile" />
           </a>
+          -->
+          <!--End No Login -->
+          <a class="btn-profile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="./img/profile-icon.png" class="icon-nav-profile" />
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-nav">
+            <a class="dropdown-item" href="#">โปรไฟล์</a>
+            <a class="dropdown-item" data-toggle="modal" data-target="#changepass_modal">เปลี่ยนรหัสผ่าน</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">ออกจากระบบ</a>
+          </div>
         </div>
         <div class="div-user div-fav-icon">
           <a class="btn-fav">
@@ -310,9 +323,22 @@
             </select>
           </div>
           <div class="div-user">
+            <!--No Login -->
+            <!--
             <a class="btn-profile" data-toggle="modal" data-target="#login_modal">
               <img src="./img/profile-icon.png" class="icon-nav-profile" />
+            </a>  
+            -->
+            <!--End No Login -->
+            <a class="btn-profile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="./img/profile-icon.png" class="icon-nav-profile" />
             </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-nav">
+              <a class="dropdown-item" href="#">โปรไฟล์</a>
+              <a class="dropdown-item" data-toggle="modal" data-target="#changepass_modal">เปลี่ยนรหัสผ่าน</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">ออกจากระบบ</a>
+            </div>
           </div>
           <div class="div-user">
             <a class="btn-fav">
@@ -1017,6 +1043,41 @@
                 <div class="col-12 col-md-4 col-lg-3 pl-md-0 mb-3 mb-md-0">
                   <button class="btn btn-forgot-pass">
                     ส่งอีเมล
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="changepass_modal" tabindex="-1" role="dialog" aria-labelledby="forgot_passLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content modal-content-jewelmalls">
+        <div class="modal-body p-2 p-md-5">
+          <div class="row justify-content-center">
+            <div class="col-12 text-center position-relative">
+              <p class="p-text-login-modal mb-1 mt-3 c-6d6e70">เปลี่ยนรหัสผ่าน ?</p>
+              <button class="icon-close-modal" data-dismiss="modal" aria-label="Close">
+                <img src="./img/icon-close-modal.png" />
+              </button>
+            </div>
+            <div class="col-12 col-md-10 col-lg-7">
+              <div class="row justify-content-center">
+                <div class="col-12 mb-3">
+                  <input type="password" class="input-jew" placeholder="ใส่รหัสผ่านเดิม" />
+                </div>
+                <div class="col-12 mb-3">
+                  <input type="password" class="input-jew" placeholder="ใส่รหัสผ่านใหม่" />
+                </div>
+                <div class="col-12 mb-3">
+                  <input type="password" class="input-jew" placeholder="ใส่รหัสผ่านใหม่อีกครั้ง" />
+                </div>
+                <div class="col-6">
+                  <button class="btn btn-forgot-pass m-0">
+                    ยืนยัน
                   </button>
                 </div>
               </div>

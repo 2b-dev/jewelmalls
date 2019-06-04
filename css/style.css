@@ -2062,6 +2062,9 @@ input[name="range-upper"]::-ms-thumb {
   top: 0.5rem;
   border-radius: 0.15rem;
 }
+.dropdown-menu.dropdown-nav .dropdown-item{
+  font-size: 1.25em;
+}
 @media (max-width: 699px) {
   header {
     padding-top: 0.5rem;
