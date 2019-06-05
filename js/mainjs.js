@@ -155,8 +155,8 @@ $(document).mouseup(function(e) {
 }*/
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".input-range-container");
-  const rangeLower = document.querySelector('input[name="range-lower"]');
-  const rangeUpper = document.querySelector('input[name="range-upper"]');
+  const rangeLower = document.querySelector('input[name="range_lower"]');
+  const rangeUpper = document.querySelector('input[name="range_upper"]');
   const trackerBetween = document.querySelector(".input-range-tracker-between");
   const minValue = 0;
   const maxValue = Number(rangeUpper.getAttribute("max"));
