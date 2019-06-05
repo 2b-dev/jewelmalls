@@ -592,6 +592,9 @@ nav li:hover a {
   font-size: 1.4em;
   color: #272727;
 }
+input[type="file"].form-control{
+  height: calc(1.7em + .75rem + 2px);
+}
 #confirmTab.nav-tabs .nav-item .nav-link.active, #confirmTab.nav-tabs .nav-item .nav-link:hover{
   background-color: #bba86b;
   border: 1px solid #bba86b;
