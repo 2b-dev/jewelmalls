@@ -2028,7 +2028,7 @@ input[name="range-upper"]::-ms-thumb {
 .form-register label.col-form-label span {
   color: #911524;
 }
-.form-register input.form-control {
+.form-register input.form-control, .form-register select.form-control {
   font-size: 1.4em;
   color: #bba86b;
   border: 1px solid #6d6e70;
@@ -2037,7 +2037,7 @@ input[name="range-upper"]::-ms-thumb {
   color: #a4a6a8;
   background-color: #ebebeb;
 }
-.form-register input.form-control:focus {
+.form-register input.form-control:focus ,.form-register select.form-control:focus {
   border: 1px solid #bba86b;
   -webkit-box-shadow: 2px 2px 9px 0px rgba(192, 173, 111, 0.74);
   -moz-box-shadow: 2px 2px 9px 0px rgba(192, 173, 111, 0.74);
@@ -2069,6 +2069,10 @@ input[name="range-upper"]::-ms-thumb {
 }
 .dropdown-menu.dropdown-nav .dropdown-item {
   font-size: 1.25em;
+}
+.addresssendip{
+  line-height: 3em;
+  height: 3em;
 }
 @media (max-width: 699px) {
   header {
