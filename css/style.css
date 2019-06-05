@@ -321,6 +321,23 @@
 #carousel-index.carousel .carousel-indicators li.active {
   background-color: #beab6f;
 }
+.div-user{
+  position: relative;
+}
+.bag-num-item{
+  position: absolute;
+  font-size: 1.35em;
+  bottom: -5px;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #bba86b;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .img-arrow-slide {
   width: 100%;
   max-width: 100%;
@@ -1072,6 +1089,9 @@ nav li:hover a {
 .control-video {
   text-align: right;
 }
+.control-video-black {
+  text-align: left;
+}
 .btn-sound,
 .btn-screen {
   background-color: transparent;
@@ -1090,6 +1110,41 @@ nav li:hover a {
 .icon-next-video {
   width: 15px;
   margin-left: 10px;
+}
+.btn-play-video-black {
+  background-color: transparent;
+  outline: none;
+  width: 30px;
+  height: 30px;
+  border: none;
+  margin-right: 10px;
+  margin-left: 0px;
+  padding: 0;
+  text-align: left;
+}
+.btn-play-video-black .img {
+  width: 100%;
+  max-width: 100%;
+}
+.btn-play-video-black:focus,
+.btn-play-video-black:active {
+  outline: none;
+  border: none;
+}
+.hr-product-black{
+  width: 200px;
+  border-bottom: 2px solid #272727;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.title-product-black{
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 2rem;
+}
+.text-description-black{
+  font-size: 1.3em;
 }
 .box-product-intro {
   width: 100%;
@@ -1183,7 +1238,7 @@ nav li:hover a {
   background-repeat: no-repeat;
   background-size: auto;
 }
-.under-line-flower.under-line-center{
+.under-line-flower.under-line-center {
   text-align: center;
 }
 .under-line-flower.under-line-center::before {
@@ -2217,7 +2272,7 @@ nav.nav-step ul.ul-step li.li-step img.img-step {
   .nav-detail-product.nav-tabs .nav-link.active .text-nav-detail-product {
     border-bottom: none;
   }
-  nav.nav-step ul.ul-step li.li-step p.p-step{
+  nav.nav-step ul.ul-step li.li-step p.p-step {
     font-size: 1.2em;
   }
   nav.nav-step ul.ul-step li.li-step img.img-step {
