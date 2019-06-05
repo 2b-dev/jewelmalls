@@ -582,6 +582,27 @@ nav li:hover a {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+.fancybox-button svg path{
+  color: #ffffff;
+}
+#confirmTab.nav-tabs{
+  border-bottom: 1px solid #bba86b;
+}
+#confirmTab.nav-tabs .nav-item .nav-link{
+  font-size: 1.4em;
+  color: #272727;
+}
+#confirmTab.nav-tabs .nav-item .nav-link.active, #confirmTab.nav-tabs .nav-item .nav-link:hover{
+  background-color: #bba86b;
+  border: 1px solid #bba86b;
+  color: #ffffff;
+}
+.form-control.ip-date[readonly]{
+  background-color: transparent;
+}
+.picker__day{
+  font-size: 1.5em;
+}
 .nav-fixed .select-lang option {
   color: #ffffff;
 }

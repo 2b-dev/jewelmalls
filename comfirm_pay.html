@@ -13,6 +13,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.6.4/compressed/themes/default.css"
     rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.6.4/compressed/themes/default.date.css"
@@ -75,9 +76,6 @@
         <div class="div-user">
           <a class="btn-bag for-bag">
             <img src="./img/bag-icon.png" class="icon-nav-profile" />
-            <div class="bag-num-item">
-              5
-            </div>
           </a>
         </div>
       </div>
@@ -357,9 +355,6 @@
           <div class="div-user">
             <a class="btn-bag for-bag">
               <img src="./img/bag-icon.png" class="icon-nav-profile" />
-              <div class="bag-num-item">
-                5
-              </div>
             </a>
           </div>
         </div>
@@ -662,103 +657,70 @@
     </div>
   </div>
   <main id="top" class="">
-    <section class="section-register mt-3 mt-md-5 mt-lg-3">
+    <section class="section-register mt-3 mt-md-5 mt-lg-3 pb-5">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-12 col-md-10">
-            <div class="row">
-              <div class="col-12 mt-3 mb-5 text-center d-flex justify-content-center justify-content-lg-start">
-                <p class="title-section under-line-flower">สมัครสมาชิกใหม่</p>
+          <div class="col-12 col-md-12 col-lg-10">
+            <div class="row justify-content-center">
+              <div class="col-12 mt-3 mb-5 text-center d-flex justify-content-center">
+                <p class="title-section under-line-flower">แจ้งการชำระเงิน</p>
               </div>
               <div class="col-12">
-                <div class="form-group row form-register d-flex align-items-center">
-                  <label for="emailip" class="col-12 col-md-3 col-lg-2 col-form-label">อีเมล<span>*</span></label>
-                  <div class="col-12 col-md-9 col-lg-10">
-                    <input type="email" class="form-control" id="emailip" placeholder="">
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-group row form-register d-flex align-items-center">
-                  <label for="nameip" class="col-12 col-md-3 col-lg-2 col-form-label">ชื่อ-สกุล<span>*</span></label>
-                  <div class="col-12 col-md-9 col-lg-10">
-                    <input type="text" class="form-control" id="nameip" placeholder="">
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-group row form-register d-flex align-items-center">
-                  <label for="dateip" class="col-12 col-md-3 col-lg-2 col-form-label">วันเกิด<span>*</span></label>
-                  <div class="col-12 col-md-9 col-lg-10">
-                    <input type="text" class="form-control ip-date" id="dateip" placeholder="วว / ดด / ปปปป">
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-group row form-register d-flex align-items-center">
-                  <label for="idenip" class="col-12 col-md-3 col-lg-2 col-form-label">เลขบัตรประชาชน</label>
-                  <div class="col-12 col-md-9 col-lg-10">
-                    <input type="text" class="form-control" id="idenip" placeholder="">
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-group row form-register d-flex align-items-center">
-                  <label for="passip" class="col-12 col-md-3 col-lg-2 col-form-label">รหัสผ่าน<span>*</span></label>
-                  <div class="col-12 col-md-9 col-lg-10">
-                    <input type="password" class="form-control" id="passip" placeholder="">
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-group row form-register d-flex align-items-center">
-                  <label for="cpassip"
-                    class="col-12 col-md-3 col-lg-2 col-form-label">ยืนยันรหัสผ่าน<span>*</span></label>
-                  <div class="col-12 col-md-9 col-lg-10">
-                    <input type="password" class="form-control" id="cpassip" placeholder="">
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-group row form-register d-flex align-items-center">
-                  <label for="cpassip" class="col-12 col-md-3 col-lg-2 col-form-label"></label>
-                  <div class="col-12 col-md-9 col-lg-10">
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="accept">
-                      <label class="custom-control-label" for="accept">ยอมรับเงื่อนไข</label>
-                      <span class="text-after-accept"><span class="c-911524">*</span>ฉันได้อ่านและเข้าใจเงื่อนไข<a
-                          href="#" class="link-policy">นโยบายการใช้งาน</a>แล้ว</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-group row form-register mb-0 d-flex align-items-center">
-                  <label for="cpassip" class="col-12 col-md-3 col-lg-2 col-form-label"></label>
-                  <div class="col-12 col-md-9 col-lg-10">
-                    <div class="row">
-                      <div class="col-12 col-md-6 col-lg-4">
-                        <button class="btn btn-gold-jawel btn-block">สมัครสมาชิก</button>
+                <ul class="nav nav-tabs nav-justified" id="confirmTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="bank-tab" data-toggle="tab" href="#bank" role="tab"
+                      aria-controls="bank" aria-selected="true">ชำระผ่านธนาคาร</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="creditcard-tab" data-toggle="tab" href="#creditcard" role="tab"
+                      aria-controls="creditcard" aria-selected="false">จ่ายผ่านบัตรเครดิต</a>
+                  </li>
+                </ul>
+                <div class="tab-content" id="confirmTabContent">
+                  <div class="tab-pane fade show active" id="bank" role="tabpanel" aria-labelledby="bank-tab">
+                    <div class="row justify-content-center">
+                      <div class="col-12">
+                        <div class="row justify-content-center">
+                          <div class="col-12 col-md-8 mb-3">
+                            <a data-fancybox href="./img/payment_th.jpg">
+                              <img src="./img/payment_th.jpg" class="img-fluid w-100">
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-8">
+                        <div class="form-group row form-register d-flex align-items-center">
+                          <label for="invoiceip" class="col-12 col-md-4 col-lg-3 col-form-label">รหัสสั่งซื้อ</label>
+                          <div class="col-12 col-md-8 col-lg-9">
+                            <input type="text" class="form-control" id="invoiceip" placeholder="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-8">
+                        <div class="form-group row form-register d-flex align-items-center">
+                          <label for="paydateip" class="col-12 col-md-4 col-lg-3 col-form-label">วันที่โอน</label>
+                          <div class="col-12 col-md-8 col-lg-9">
+                            <input type="text" class="form-control ip-date" id="paydateip" placeholder="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-8">
+                        <div class="form-group row form-register d-flex align-items-center">
+                          <label for="paytimeip" class="col-12 col-md-4 col-lg-3 col-form-label">วันที่โอน</label>
+                          <div class="col-12 col-md-8 col-lg-9">
+                            <input type="text" class="form-control" id="paytimeip" placeholder="ตัวอย่าง 19 : 26">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 text-center">
+                        <button class="btn btn-gold-jawel px-5">แจ้งการชำระ</button>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-group row form-register d-flex align-items-center">
-                  <label for="cpassip" class="col-12 col-md-3 col-lg-2 col-form-label"></label>
-                  <div class="col-12 col-md-9 col-lg-10">
+                  <div class="tab-pane fade" id="creditcard" role="tabpanel" aria-labelledby="creditcard-tab">
                     <div class="row">
-                      <div class="col-12 col-md-6 col-lg-4">
-                        <a href="" class="btn btn-jew-outline-black btn-block btn-social py-2 mt-2 bd-6d6e70">
-                          <img src="./img/facebook-icon-btn.png" class="icon-social-btn" />Sign in with Facebook
-                        </a>
-                      </div>
-                      <div class="col-12 col-md-6 col-lg-4">
-                        <a href="" class="btn btn-jew-outline-black btn-block btn-social py-2 mt-2 bd-6d6e70">
-                          <img src="./img/g-icon-btn.png" class="icon-social-btn" />Sign
-                          in with Google
-                        </a>
+                      <div class="col-12 text-center my-3">
+                        <button class="btn btn-gold-jawel px-5">คลิกเพื่อชำระผ่านบัตรเครดิต</button>
                       </div>
                     </div>
                   </div>
@@ -1107,6 +1069,7 @@
   <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.6.4/compressed/legacy.js"></script>
   <script type="text/javascript"

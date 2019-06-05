@@ -259,3 +259,4 @@ $( "input#range-upper" ).change(function() {
 });
 
 
+$('.ip-date').pickadate()
