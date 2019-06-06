@@ -363,7 +363,10 @@
 #carousel-index .carousel-control-next {
   width: 10%;
 }
-
+.recent-post {
+  background-color: #edeceb;
+  padding: 1.5rem;
+}
 #carousel-index.carousel .carousel-indicators li {
   background-color: #6d6e70;
 }
@@ -1368,7 +1371,12 @@ input[type="file"].form-control {
 .text-description-black {
   font-size: 1.3em;
 }
-
+.text-description-black.c-ffffff p {
+  color: #ffffff;
+}
+.text-description-black.c-000000 p {
+  color: #000000;
+}
 .box-product-intro {
   width: 100%;
   position: relative;
@@ -2634,7 +2642,18 @@ nav.nav-step ul.ul-step li.li-step img.img-step {
   color: #000000;
   border: 1px solid #000000;
 }
+.ip-black {
+  background-color: transparent;
+  height: 100%;
+  font-size: 1.4em;
+  color: #ffffff;
+  width: 120px;
+}
 
+.ip-black.c-000000 {
+  color: #000000;
+  border: 1px solid #000000;
+}
 .btn-product-black {
   border: 1px solid #ffffff;
   font-size: 1.4em;
@@ -2726,12 +2745,12 @@ nav.nav-step ul.ul-step li.li-step img.img-step {
   box-shadow: 2px 2px 9px 0px rgba(192, 173, 111, 0.74);
 }
 .text-content {
-  font-size: 1.4em;
+  font-size: 1.2em;
   margin-bottom: 0;
   line-height: 1.15em;
 }
 .text-tag-content {
-  padding-left: 40px;
+  padding-left: 35px;
   position: relative;
 }
 .text-tag-content::before {
@@ -2796,6 +2815,21 @@ nav.nav-step ul.ul-step li.li-step img.img-step {
 }
 .btn-search-content i {
   color: #bba86b;
+}
+.title-side-content {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  border-bottom: 1px solid #b9a66b;
+}
+.box-recent-content {
+  position: relative;
+  display: flex;
+}
+.box-recent-content div.recent-img {
+  width: 30%;
+}
+.box-recent-content div.recent-text {
+  width: 70%;
 }
 /*StartMobile*/
 
@@ -3078,6 +3112,22 @@ nav.nav-step ul.ul-step li.li-step img.img-step {
   #tab-pane-detail-product .tab-pane {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+  .contain-all-content {
+    padding-right: 340px;
+    position: relative;
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex;
+  }
+  .btn-like-product-sm.sm2 {
+    height: 25px !important;
+  }
+  .side-content {
+    width: 340px;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 
