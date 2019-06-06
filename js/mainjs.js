@@ -259,4 +259,8 @@ $( "input#range-upper" ).change(function() {
 });
 
 
-$('.ip-date').pickadate()
+$('.ip-date').pickadate(
+  {
+    format: 'yyyy-mm-dd',
+  }
+)
