@@ -363,9 +363,10 @@
 #carousel-index .carousel-control-next {
   width: 10%;
 }
-.recent-post {
+.recent-post, .facebook-box, .categories-box, .banner-box {
   background-color: #edeceb;
   padding: 1.5rem;
+  margin-bottom: 2rem;
 }
 #carousel-index.carousel .carousel-indicators li {
   background-color: #6d6e70;
@@ -2824,6 +2825,7 @@ nav.nav-step ul.ul-step li.li-step img.img-step {
 .box-recent-content {
   position: relative;
   display: flex;
+  margin-bottom: 1rem;
 }
 .box-recent-content div.recent-img {
   width: 30%;
