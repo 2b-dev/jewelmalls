@@ -363,7 +363,10 @@
 #carousel-index .carousel-control-next {
   width: 10%;
 }
-.recent-post, .facebook-box, .categories-box, .banner-box {
+.recent-post,
+.facebook-box,
+.categories-box,
+.banner-box {
   background-color: #edeceb;
   padding: 1.5rem;
   margin-bottom: 2rem;
@@ -379,7 +382,22 @@
 .div-user {
   position: relative;
 }
-
+.btn-tag-categories {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  outline: none;
+  color: #b9a66b;
+  background-color: #272727;
+  font-size: 1.2em;
+  margin: 3px;
+  border-radius: 0.15rem;
+}
+.btn-tag-categories:hover,
+.btn-tag-categories:active {
+  border: none;
+  outline: none;
+}
 .bag-num-item {
   position: absolute;
   font-size: 1.35em;
