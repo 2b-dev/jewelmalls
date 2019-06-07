@@ -3139,7 +3139,8 @@ nav.nav-step ul.ul-step li.li-step img.img-step {
     margin-right: -15px;
     margin-left: -15px;
     display: flex;
-    min-height: 120vh;
+    height: 100%;
+    min-height: 110vh;
   }
   .btn-like-product-sm.sm2 {
     height: 25px !important;
@@ -3147,8 +3148,10 @@ nav.nav-step ul.ul-step li.li-step img.img-step {
   .side-content {
     width: 340px;
     position: absolute;
+    height: 100%;
     top: 0;
     right: 0;
+    bottom: 0;
   }
 }
 
