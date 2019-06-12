@@ -1585,6 +1585,16 @@ input[type="file"].form-control {
 
 .card-product-image {
   padding: 0.5rem;
+  position: relative;
+}
+.hide-name-img{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  height: 9.5%;
 }
 
 .card-product-body {
@@ -1621,6 +1631,7 @@ input[type="file"].form-control {
   top: 50%;
   opacity: 0;
   padding-top: 1rem;
+  width: 100%;
   padding-bottom: 0;
   text-align: center;
   background-color: #ffffff;
@@ -1665,6 +1676,7 @@ input[type="file"].form-control {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center center;
+  z-index: 5;
 }
 
 .icon-fav-card-product.get_fav {
